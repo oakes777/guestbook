@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Message</th>
+                    <th>Email Format</th>
+                    <th>Mailing List</th>
+                    <th>Date Submitted</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% confirmations.forEach(entry => { %>
+                <tr>
+                    <td><%= entry.fname %></td>
+                    <td><%= entry.lname %></td>
+                    <td><%= entry.jtitle %></td>
+                    <td><%= entry.company %></td>
+                    <td><%= entry.message %></td>
+                    <td><%= entry.eformat %></td>
+                    <td><%= entry.mlist ? 'Yes' : 'No' %></td>
+                    <td><%= entry.submitted_at %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+    </body>
+</html>

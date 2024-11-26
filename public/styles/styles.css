@@ -1,0 +1,79 @@
+.container {
+    background-color: lightgray;
+    width: 95%;
+    padding: 10px;
+}
+
+.contact-form {
+    background-color: white;
+    width: 75%;
+    border: 2px solid darkgrey;
+    border-radius: 5px;
+    margin: auto;
+
+}
+
+.contact-form h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-format-row {
+    display: flex;
+    margin-left: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row-mailing-list {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row div {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.form-row div:last-child {
+    margin-right: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.submit-button {
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: darkgreen;
+}
+
+.form-row-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.err {
+    color: red;
+}

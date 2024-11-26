@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guestbook</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <script defer src="/scripts/index.js"></script>
+        <link rel="icon" href="../public/images/gb-favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <main class="container">
+            <form id="guestbook-form" class="contact-form" action="/confirm" method="POST">
+                <h1>Contact Form</h1>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname">
+                        <span id="err-fname" class="err" style="display: none;">First name is required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname">
+                        <span id="err-lname" class="err" style="display: none;">Last name is required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="jtitle">Job Title:</label>
+                        <input type="text" id="jtitle" name="jtitle">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn URL:</label>
+                        <input type="text" id="linkedin" name="linkedin" pattern="https://linkedin\.com/in/.*">
+                        <span id="err-linkedin" class="err" style="display: none;">Must start with "https://linkedin.com/in/"</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span id="err-email" class="err" style="display: none;">Email required for mailing list in valid format</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mmethod">How did we meet?</label>
+                        <select id="mmethod" name="mmethod">
+                            <option value="">--Select--</option>
+                            <option value="meetup">Meetup</option>
+                            <option value="job-fair">Job Fair</option>
+                            <option value="conference">Conference</option>
+                            <option value="referral">Referral</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span id="err-mmethod" class="err" style="display: none;">Please select how we met</span>
+                    </div>
+
+                    <div class="form-group" id="other-meet-container" style="display: none;">
+                        <label for="omeet">Other (please
+                            specify):</label><br>
+                        <input type="text" id="omeet" name="omeet">
+                        <span id="err-omeet" class="err" style="display: none;">Please describe how we met</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <div class="form-row-mailing-list">
+                    <label for="mlist">
+                        <input type="checkbox" id="mlist"
+                            name="mlist">Please add me to your mailing
+                        list
+                    </label>
+                </div>
+
+                <div class="email-format-row">
+                    <label>Choose an email format:</label>
+                    <label>
+                        <input type="radio" name="eformat" value="html"
+                            checked> HTML
+                    </label>
+                    <label>
+                        <input type="radio" name="eformat" value="text">
+                        Text
+                    </label>
+                </div>
+
+                <div class="form-row-button">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
